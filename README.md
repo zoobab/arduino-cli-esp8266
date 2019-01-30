@@ -29,6 +29,7 @@ Ideas
 * Try ser2net (exposed on a static URL on k8s)
 * Try ser2net TCP port exposure without kubernetes? Unsecure?
 * WebIDE with webusb direct communication to the USB device? Like the Dapboot project https://github.com/devanlai/dapboot
+* Try pwnat tunnel
 
 Links
 =====
