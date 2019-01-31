@@ -1,4 +1,4 @@
-FROM zoobab/arduino-cli
+FROM registry.gitlab.com/zoobab/arduino-cli
 
 ENV USER root
 COPY blink2.ino /root/Arduino/blink2/blink2.ino
