@@ -1,3 +1,3 @@
 #!/bin/bash
-./build.sh
-./run.sh
+time ./build.sh
+time ./run.sh
