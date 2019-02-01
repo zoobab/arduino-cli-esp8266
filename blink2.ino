@@ -6,8 +6,8 @@ void setup() {
 void loop() {
   digitalWrite(LED_BUILTIN, HIGH);
   Serial.print("high\n");
-  delay(1200);
+  delay(6000);
   digitalWrite(LED_BUILTIN, LOW);
   Serial.print("low\n");
-  delay(1200);
+  delay(6000);
 }
