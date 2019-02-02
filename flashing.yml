@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: arduino-cli-flashing
+spec:
+  containers:
+  - name: arduino-cli-flashing
+    image: registry.gitlab.com/zoobab/arduino-cli-esp8266
+    securityContext:
+      privileged: true
