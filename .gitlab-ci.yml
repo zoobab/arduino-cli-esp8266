@@ -16,8 +16,8 @@ before_script:
 #  only:
 #    - master
 
-flash:
-  stage: flash
+deploy:
+  stage: deploy
   script:
     - echo "$SSH_KEY" > ssh.key
     - chmod 600 ssh.key
