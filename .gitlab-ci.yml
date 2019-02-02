@@ -8,13 +8,21 @@ services:
 before_script:
   - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
 
-buildandpush:
-  stage: build
+#buildandpush:
+#  stage: build
+#  script:
+#    - docker build --pull -t "$CI_REGISTRY_IMAGE" .
+#    - docker push "$CI_REGISTRY_IMAGE"
+#  only:
+#    - master
+
+flash:
+  stage: flash
   script:
-    - docker build --pull -t "$CI_REGISTRY_IMAGE" .
-    - docker push "$CI_REGISTRY_IMAGE"
-  only:
-    - master
+    - echo "$SSH_KEY" > ssh.key
+    - chmod 600 ssh.key
+    - ssh -i ssh.key -J serveo.net dockeru@zoobab docker run --privileged registry.gitlab.com/zoobab/arduino-cli-esp8266
+    - ssh -i ssh.key -J serveo.net dockeru@zoobab docker run --privileged registry.gitlab.com/zoobab/arduino-cli-esp8266
 
 #buildandpush:
 #  stage: build
