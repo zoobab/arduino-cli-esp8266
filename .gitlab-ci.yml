@@ -8,7 +8,7 @@ services:
 before_script:
   - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
 
-buildandpush:
+build:
   stage: build
   script:
     - docker build --pull -t "$CI_REGISTRY_IMAGE" .
