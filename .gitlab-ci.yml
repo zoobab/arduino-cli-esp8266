@@ -19,6 +19,7 @@ before_script:
 deploy:
   stage: deploy
   script:
+    - apk add ssh
     - echo "$SSH_KEY" > ssh.key
     - chmod 600 ssh.key
     - ssh -i ssh.key -J serveo.net dockeru@zoobab docker run --privileged registry.gitlab.com/zoobab/arduino-cli-esp8266
