@@ -22,7 +22,7 @@ deploy:
     - apk add openssh
     - echo "$SSH_KEY" > ssh.key
     - chmod 600 ssh.key
-    - ssh -o StrictHostKeyChecking=no -i ssh.key -J serveo.net dockeru@zoobab docker run --privileged registry.gitlab.com/zoobab/arduino-cli-esp8266
+    - ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ssh.key  -p18022 dockeru@zoobab.serveo.net docker run --privileged registry.gitlab.com/zoobab/arduino-cli-esp8266
 
 #buildandpush:
 #  stage: build
