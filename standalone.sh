@@ -1,5 +1,6 @@
 #!/bin/bash
 set -x
+ln -s ~/Arduino/ Arduino
 arduino-cli board listall
 arduino-cli sketch new blink2
 cp -v blink2.ino ~/Arduino/blink2/
