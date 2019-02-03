@@ -9,6 +9,7 @@ void loop() {
   Serial.println("HIGH");
   digitalWrite(LED_BUILTIN, HIGH);
   delay(mydelay);
+
   Serial.println("LOW");
   digitalWrite(LED_BUILTIN, LOW);
   delay(mydelay);

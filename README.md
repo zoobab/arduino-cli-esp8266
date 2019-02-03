@@ -6,13 +6,24 @@ The goal here is to blink a LED on an ESP8266 (wemos d1 mini) using:
 * gitlab-ci
 * docker
 * Raspberry-pi board
-* kubernetes with its k3s fork
+* kubernetes: k3s, minikube --vm-driver=none, kind
+
+Standalone arduino-cli
+======================
+
+```
+$ arduino-cli board listall
+$ arduino-cli sketch new blink2
+$ cp -v blink2.ino ~/Arduino/blink2/
+$ arduino-cli compile --fqbn esp8266:esp8266:d1 Arduino/blink2
+$ arduino-cli upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:d1 Arduino/blink2
+```
 
 Expose SSHD to the outside world
 ================================
 
 ```
-dockeru@sabayon$ while true; do ssh -R zoobab:20443:localhost:22 serveo.net ; done
+dockeru@sabayon$ while true; do ssh -R zoobab:18022:localhost:22 serveo.net ; done
 ```
 
 Problems and ideas
