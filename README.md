@@ -26,6 +26,9 @@ Gitlab-ci architecture
 Gitlab -> Gitlab-Runner -> Gitlab-Registry -> SSH-Tunnel -> Laptop -> ESP8266
 ```
 
+![network diagram](diagram.png)
+
+
 Expose SSHD to the outside world
 ================================
 
