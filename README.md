@@ -19,6 +19,13 @@ $ arduino-cli compile --fqbn esp8266:esp8266:d1 Arduino/blink2
 $ arduino-cli upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:d1 Arduino/blink2
 ```
 
+Gitlab-ci architecture
+======================
+
+```
+Gitlab -> Gitlab-Runner -> Gitlab-Registry -> SSH-Tunnel -> Laptop -> ESP8266
+```
+
 Expose SSHD to the outside world
 ================================
 
@@ -26,8 +33,8 @@ Expose SSHD to the outside world
 dockeru@sabayon$ while true; do ssh -R zoobab:18022:localhost:22 serveo.net ; done
 ```
 
-Problems and ideas
-==================
+Problems
+========
 
 * docker+ssh instead of k3s/k8s
 * gitlab vs github dockerhub support
