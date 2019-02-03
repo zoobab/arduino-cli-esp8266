@@ -42,9 +42,9 @@ Problems
 * docker+ssh instead of k3s/k8s
 * gitlab vs github dockerhub support
 * multistage build:
-# arduino-cli
-# arduino-cli+esp8266sdk
-# arduino-cli+esp8266+yourcode
+1. arduino-cli
+2. arduino-cli+esp8266sdk
+3. arduino-cli+esp8266+yourcode
 * Kubernetes Kind containers can see /dev/ttyUSB0
 * Try ser2net (exposed on a static URL on k8s)
 * Try ser2net TCP port exposure without kubernetes? Unsecure?
