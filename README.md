@@ -36,6 +36,52 @@ Expose SSHD to the outside world
 dockeru@sabayon$ while true; do ssh -R zoobab:18022:localhost:22 serveo.net ; done
 ```
 
+Screenshot with only docker
+============================
+
+Screenshot with only docker, device not attached:
+
+```
+$ ./buildandrun.sh
++ docker build -t blink2 .
+Sending build context to Docker daemon  461.8kB
+Step 1/5 : FROM zoobab/arduino-cli
+ ---> de97cab13632
+Step 2/5 : ENV USER root
+ ---> Using cache
+ ---> 76677cdf44e2
+Step 3/5 : COPY blink2.ino /root/Arduino/blink2/blink2.ino
+ ---> e4af4b1fa471
+Step 4/5 : RUN arduino-cli compile --fqbn esp8266:esp8266:d1 Arduino/blink2
+ ---> Running in 8dc239621453
+Sketch uses 262384 bytes (25%) of program storage space. Maximum is 1044464 bytes.
+Global variables use 26792 bytes (32%) of dynamic memory, leaving 55128 bytes for local variables. Maximum is 81920 bytes.
+Removing intermediate container 8dc239621453
+ ---> d5da4f044b84
+Step 5/5 : ENTRYPOINT ["arduino-cli","upload","-p","/dev/ttyUSB0","--fqbn","esp8266:esp8266:d1","Arduino/blink2"]
+ ---> Running in b5a82d14655e
+Removing intermediate container b5a82d14655e
+ ---> 8266d39ef77e
+Successfully built 8266d39ef77e
+Successfully tagged blink2:latest
+
+real    0m9.830s
+user    0m0.030s
+sys     0m0.032s
++ docker run --privileged blink2
+No new serial port detected.
+error: cannot access /dev/ttyUSB0
+
+error: espcomm_open failed
+error: espcomm_upload_mem failed
+Error: exit status 2
+Error during upload.
+
+real    0m11.255s
+user    0m0.029s
+sys     0m0.023s
+```
+
 Problems
 ========
 
