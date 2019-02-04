@@ -85,6 +85,8 @@ sys     0m0.023s
 Problems
 ========
 
+* could not make ser2net export to another machine working
+* docker+ssh of 18.09 release is super badly documented, could not make it work
 * docker+ssh instead of k3s/k8s
 * gitlab vs github dockerhub support
 * multistage build:
@@ -98,6 +100,8 @@ Problems
 Ideas
 =====
 
+* file a bug with an alpine container
+* try USB over IP transport
 * document docker usage
 * make as many docker images as there are targets
 * fix the ser2net forwarding and make a simple docker listener
