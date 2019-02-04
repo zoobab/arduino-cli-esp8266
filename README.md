@@ -89,10 +89,6 @@ Problems
 * docker+ssh of 18.09 release is super badly documented, could not make it work
 * docker+ssh instead of k3s/k8s
 * gitlab vs github dockerhub support
-* multistage build:
-1. arduino-cli
-2. arduino-cli+esp8266sdk
-3. arduino-cli+esp8266+yourcode
 * Kubernetes Kind containers can see /dev/ttyUSB0
 * Try ser2net (exposed on a static URL on k8s)
 * Try ser2net TCP port exposure without kubernetes? Unsecure?
@@ -100,7 +96,8 @@ Problems
 Ideas
 =====
 
-* file a bug with an alpine container
+* file a bug about the bad caching (needed to do a first blink.ino to fully cache the sdk)
+* file a bug with an alpine container (could not run the static binary in there, g++ issue)
 * try USB over IP transport
 * document docker usage
 * make as many docker images as there are targets
