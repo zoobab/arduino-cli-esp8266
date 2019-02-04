@@ -56,6 +56,7 @@ Ideas
 * make as many docker images as there are targets
 * fix the ser2net forwarding and make a simple docker listener
 * (from a fosdem question) add support for a virtual target QEMU+AVR https://github.com/michaelrolnik/qemu-avr
+* (from a fosdem question) add support for a virtual target SimAV https://github.com/buserror/simavr
 * (from a fosdem question) add a simple test example (grepping the serial console for a git version banner for ex)
 * WebIDE with webusb direct communication to the USB device? Like the Dapboot project https://github.com/devanlai/dapboot
 * Arduino-IDE git support
