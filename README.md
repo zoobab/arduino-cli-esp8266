@@ -98,7 +98,7 @@ Ideas
 
 * file a bug about the bad caching (needed to do a first blink.ino to fully cache the sdk)
 * file a bug with an alpine container (could not run the static binary in there, g++ issue)
-* try USB over IP transport
+* try USB over IP transport to transport the /dev/ttyUSB0 http://usbip.sourceforge.net/
 * document docker usage
 * make as many docker images as there are targets
 * fix the ser2net forwarding and make a simple docker listener
