@@ -117,5 +117,6 @@ Links
 =====
 
 * Fosdem 2019 talk: https://fosdem.org/2019/schedule/event/hw_gitlab_ci_arduino/
+* Fosdem 2019 video recording: https://www.youtube.com/watch?v=-oBBWSjnOVU
 * Arduino CLI: https://github.com/arduino/arduino-cli
 * K3S Kubernetes stripped: https://github.com/ibuildthecloud/k3s
