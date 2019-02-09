@@ -1,10 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: arduino-cli-flashing
+  generateName: arduinocli-
 spec:
+  imagePullPolicy: Always
+  restartPolicy: Never
   containers:
-  - name: arduino-cli-flashing
-    image: registry.gitlab.com/zoobab/arduino-cli-esp8266
+  - image: registry.gitlab.com/zoobab/arduino-cli-esp8266
+    name: arduinocli
     securityContext:
       privileged: true
