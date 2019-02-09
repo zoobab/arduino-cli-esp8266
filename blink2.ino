@@ -1,4 +1,4 @@
-int mydelay = 4000 ;
+int mydelay = 1000 ;
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
