@@ -36,9 +36,28 @@ Expose SSHD to the outside world
 dockeru@sabayon$ while true; do ssh -R zoobab:18022:localhost:22 serveo.net ; done
 ```
 
+Docker HTTP API
+===============
+
+See https://docs.docker.com/develop/sdk/examples/
+
+K3S on my laptop
+================
+
+You can run a simple K3S cluster on your laptop inside docker:
+
+```
+$ docker run --privileged -p6443:6443 -d --name k3s ibuildthecloud/k3s:v0.1.0-rc3 server
+```
+
+You have to extract the client config located under ```/root/.kube/k3s.yml```.
+
+Note that the ```/dev/ttyUSB0``` device needs to be plugged-in before you start the k3s server.
+
 Problems
 ========
 
+* docker+ssh feature of 18.09 is badly documented
 * docker+ssh instead of k3s/k8s
 * gitlab vs github dockerhub support
 * multistage build:
