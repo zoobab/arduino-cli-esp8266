@@ -106,7 +106,6 @@ Problems
 ========
 
 * docker+ssh feature of 18.09 is badly documented
-=======
 * could not make ser2net export to another machine working
 * docker+ssh of 18.09 release is super badly documented, could not make it work
 * docker+ssh instead of k3s/k8s
